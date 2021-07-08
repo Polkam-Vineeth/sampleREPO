@@ -1,0 +1,52 @@
+<div class="container">
+<h1>{{title}}</h1>  <!-- String Interpolation --> 
+
+<label>Title:</label>
+<input type="text" value={{title}}>
+<br>
+<input type="text" placeholder="Enter something">
+<button disabled={{isDisabled}}>btn</button>
+<br><br>
+
+
+<!-- Property Binding --> 
+<h2>Property Binding Example</h2> 
+  <img [src]="imgUrl" [style.width.px]="'50'"/>  
+
+<button [disabled] = "isDisabled" >click</button>
+<input type="text" [value]="fname">
+<br>
+<!-- <input type="text" [value]="fname" #name>
+<p innerHTML={{name.value}}></p> -->
+<br><br>
+
+
+<h2>Style Binding Example</h2>
+<b [style.color]='color'>Hello</b>
+<p  [style.color]="'#3DBE29'"
+    [style.font-size.px]="'24'" >
+    PVK
+</p>
+<br><br>
+
+
+<h2>Event Binding Example</h2>
+<button (click)="updateName()">Update name</button>
+<b>This is {{fname+lname}}</b>
+<br>
+<button (click)="ChangeColor()">color</button>
+<b [style.color]='color'>Example</b>
+<br><br>
+
+
+<h2>Two-way Binding Example</h2> 
+<!-- <input type="text" [value]=lname (input)="onSave($event)">
+{{lname}}
+<br> -->
+
+<!-- [(ngModel)] -->
+<input type="text" [(ngModel)]="xname">  
+<p>{{xname}}</p>  
+
+
+</div>
